@@ -1,0 +1,57 @@
+﻿<DOCTYPE! html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="styl1.css">
+
+<head/>
+<body>
+<ul>
+  <li><a href="index.html">Start</a></li>
+  <li><a href="kalkulatorLema6i8.html">Stanisława Lema 6 i 8</a></li>
+  <li><a href="kalkulatorLema10i12.html">Stanisława Lema 10 i 12</a></li>
+  <li><a href="kalkulatorAlRzeczp4D.html">Al. Rzeczypospolitej 4D</a></li>
+  <li><a href="kalkulatorSzczecinska31i33.html">Szczecińska 31 i 33</a></li>
+  <li><a href="sprzedaz.html">Sprzedaż</a></li>
+</ul>
+
+<h1>Uzasadnienie korekty</h1>
+
+
+
+<p>
+<div class="poledowpisu">
+<input type="name" id="calc1" value="">
+
+<input type="name" id="calc2" value="WPISZ NR REPERTORIUM">
+
+<input type="name" id="calc3" value="WPISZ ADRES">
+
+<button onclick="sprzedaz()">UZUPEŁNIJ</button>
+
+</div>
+</p>
+
+<p class="sprzedaz">W związku ze sprzedażą dnia <span id="datasprzedazy">DATA SPRZEDAŻY</span> aktem notarialnym Rep A <span id="rep">REPERTORIUM</span> nieruchomości położonej w Gdańsku przy ul. <span id="adres">ADRES</span> koryguję podatek od nieruchomości jak wyżej. 
+</p>
+
+
+<script>
+var x;
+var y;
+var z;
+function sprzedaz() {
+  var x = document.getElementById("calc1").value;
+  document.getElementById("datasprzedazy").innerHTML = x;
+  var y = document.getElementById("calc2").value;
+  document.getElementById("rep").innerHTML = y;
+  var z = document.getElementById("calc3").value;
+  document.getElementById("adres").innerHTML = z;
+
+}
+</script>
+
+</body>
+</html>

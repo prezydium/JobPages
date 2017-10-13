@@ -1,0 +1,33 @@
+<DOCTYPE! html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styl1.css">
+<head/>
+<body>
+<ul>
+  <li><a href="index.html">Start</a></li>
+  <li><a href="kalkulatorLema6i8.html">Stanis³awa Lema 6 i 8</a></li>
+  <li><a href="kalkulatorLema10i12.html">Stanis³awa Lema 10 i 12</a></li>
+  <li><a href="kalkulatorAlRzeczp4D.html">Al. Rzeczypospolitej 4D</a></li>
+  <li><a href="kalkulatorSzczecinska31i33.html">Szczeciñska 31 i 33</a></li>
+  <li><a href="sprzedaz.html">Sprzeda¿</a></li>
+</ul>
+<p><br><br>
+<p id="endisnear" style=margin:auto;width:50%;font-size:5em;></p>
+<button onclick="doAkcji()" style=display:block;margin:auto;width:40%;>Nie klikaj mnie je¿eli nie chcesz siê denerwowaæ!</button>
+<script>
+
+
+function doAkcji() {
+    var d = Date.parse("December 11, 2017");
+    var now = new Date();
+    var n = now.getTime();
+
+    document.getElementById("endisnear").innerHTML ="Do akcji wymiarowej zosta³o ju¿ tylko: " + Math.round(((d - n) /1000/60/60/24)+1) + " dni!!";
+}
+
+</script>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<DOCTYPE! html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="styl1.css">
+
+<head/>
+<body>
+<ul>
+  <li><a href="index.html">Start</a></li>
+  <li><a href="kalkulatorLema6i8.html">Stanis³awa Lema 6 i 8</a></li>
+  <li><a href="kalkulatorLema10i12.html">Stanis³awa Lema 10 i 12</a></li>
+  <li><a href="kalkulatorAlRzeczp4D.html">Al. Rzeczypospolitej 4D</a></li>
+  <li><a href="kalkulatorSzczecinska31i33.html">Szczeciñska 31 i 33</a></li>
+  <li><a href="sprzedaz.html">Sprzeda¿</a></li>
+</ul>
+
+<h1>SZCZECIÑSKA 31 I 33</h1>
+
+<p class="wyniki">Powierzchnia mieszkania wynosi: <span id="wynikpow1"></span><br> 
+powierzchnia czêœci wspólnych wynosi: <span id="wynikczwspol"></span><br>
+Udzia³ w gruncie wraz z udzia³em w drodze wynosi: <span id="wynikgrunt"></span><br>
+</div></p>
+
+<p>
+<div class="poledowpisu">
+Licznik:  <input type="number" id="calc1" value="">
+<button onclick="calcMieszk()">Policz</button>
+</p>
+<div/>
+
+
+
+<script>
+var calc1;
+var xgrunt = 6587; // Powierzchnia gruntu
+var xczwspol = 6273; // Powierzchnia czêœci wspólnych
+var xmianownik = 890896; // Mianownik
+var xdroga = 3.14; // udzia³ w drodze
+function calcMieszk() {
+  var x = document.getElementById("calc1").value;
+  var resultczwspol = (x * xczwspol) / xmianownik;
+
+  document.getElementById("wynikczwspol").innerHTML = Math.round(resultczwspol*100)/100;
+  var resultgrunt = (x * xgrunt) / xmianownik;
+  document.getElementById("wynikgrunt").innerHTML = Math.round(resultgrunt*100)/100 + xdroga;
+  var resultpow1 = x /100;
+  document.getElementById("wynikpow1").innerHTML = resultpow1;
+  
+
+}
+</script>
+
+</body>
+</html>

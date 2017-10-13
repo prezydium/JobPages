@@ -1,0 +1,65 @@
+<DOCTYPE! html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="styl1.css">
+
+<head/>
+<body>
+
+<ul>
+  <li><a href="index.html">Start</a></li>
+  <li><a href="kalkulatorLema6i8.html">Stanis³awa Lema 6 i 8</a></li>
+  <li><a href="kalkulatorLema10i12.html">Stanis³awa Lema 10 i 12</a></li>
+  <li><a href="kalkulatorAlRzeczp4D.html">Al. Rzeczypospolitej 4D</a></li>
+  <li><a href="kalkulatorSzczecinska31i33.html">Szczeciñska 31 i 33</a></li>
+  <li><a href="sprzedaz.html">Sprzeda¿</a></li>
+</ul>
+<h1>ALEJA RZECZYPOSPOLITEJ 4D</h1>
+
+<p class="wyniki">Powierzchnia mieszkania wynosi: <span id="wynikpow1"></span><br> powierzchnia czêœci wspólnych wynosi: <span id="wynikczwspol"></span><br>
+Udzia³ w gruncie wynosi: <span id="wynikgrunt"></span><br>
+</div></p>
+<p class="wyniki">Powierzchnia hali wynosi: <span id="wynikpow2"></span><br> powierzchnia czêœci wspólnych hali wynosi: <span id="wynikczwspol2"></span><br>
+Udzia³ w gruncie hali wynosi: <span id="wynikgrunt2"></span><br>
+</div></p>
+<p>
+<div class="poledowpisu">
+Licznik mieszkania: <input type="number" id="calc1" value="">
+Licznik hali: <input type="number" id="calc2" value="">
+<button onclick="calcMieszk()">Policz</button>
+<p id="demo"></p>
+<div/>
+
+
+
+<script>
+var calc1;
+var calc2;
+var xgrunt = 5416; // Powierzchnia gruntu
+var xczwspol = 4523; // Powierzchnia czêœci wspólnych
+var xmianownik = 1213259; // Mianownik
+function calcMieszk() {
+  var x = document.getElementById("calc1").value;
+  var y = document.getElementById("calc2").value;
+  var resultczwspol = (x * xczwspol) / xmianownik;
+
+  document.getElementById("wynikczwspol").innerHTML = Math.round(resultczwspol*100)/100;
+  var resultgrunt = (x * xgrunt) / xmianownik;
+  document.getElementById("wynikgrunt").innerHTML = Math.round(resultgrunt*100)/100;
+  var resultpow1 = x /100;
+  document.getElementById("wynikpow1").innerHTML = resultpow1;
+  
+
+  var resultczwspol2 = (y * xczwspol) / xmianownik;
+  document.getElementById("wynikczwspol2").innerHTML = Math.round(resultczwspol2*100)/100;
+  var resultgrunt2 = (y * xgrunt) / xmianownik;
+  document.getElementById("wynikgrunt2").innerHTML = Math.round(resultgrunt2*100)/100;
+  var resultpow2 = y /100;
+  document.getElementById("wynikpow2").innerHTML = resultpow2;
+
+}
+</script>
+
+</body>
+</html>
